@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title</title>
+</head>
+<style>
+/*div{
+
+    font-size: 0;
+}
+a{
+    position: relative;;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 10px solid #333;
+    border-left: 0;
+}
+a:nth-child(1) {
+  border-left: 10px solid #333;
+}
+a:hover{
+    border-color: #910004;
+}
+a:hover hr{
+    display: inline-block;
+    border-color: #910004;
+}
+hr{
+    position: absolute;
+    margin-left: -10px;
+    margin-top: -10px;
+    display: none;
+    height: 118px;
+    width: 0;
+    border-left: 10px solid #333;
+    vertical-align: top;
+}*/
+.circle-score {
+    position: relative;
+    border-radius: 50%;
+    background: #d6d6d6;
+    width: 34px;
+    height: 34px;
+  }
+.clip-left, .clip-right, .circle-left, .circle-right{
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 32px;
+  height: 32px;
+}
+.circle-left, .circle-right{
+  border-radius: 50%;
+  background: #EF4639;
+}
+.circle-left{
+  transform: rotate(0deg)
+}
+.circle-right{
+  transform: rotate(180deg)
+}
+.circle-right, .clip-right {
+  clip: rect(0, auto, auto, 16px);
+}
+.circle-left , .clip-left{
+  clip: rect(0, 16px, auto, 0);
+}
+.step3{
+  background: #FDC441;
+}
+.step4{
+  background: #54B3CF;
+}
+.step5{
+  background: #7AC54E;
+}
+.stepbg{
+  background: #d6d6d6;
+}
+/*
+*当top和left取值为auto时，相当于0
+*当bottom和right取值为auto时，相当于100%
+*/
+.circle-mask {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    background: #FFF;
+    text-align: center;
+}
+</style>
+
+<body>
+<div>
+
+    <!--<a href="#">q</a>
+
+    <a href="#"><hr>v</a>
+
+    <a href="#"><hr>bbb</a>-->
+
+    <div class="circle-score" style="margin: 100px auto">
+      <div class="circle-left">
+        <div class="clip-left"></div>
+      </div>
+      <div class="circle-right" class="transform:rotate(80deg)">
+        <div class="clip-right"></div>
+      </div>
+      <div class="circle-mask">
+        <span>33</span>
+      </div>
+    </div>
+</div>
+
+<script>
+(function(){
+
+var canvas = document.getElementById('ID');
+var ctx = canvas.getContext('Context');
+
+canvas.width = Width;
+canvas.height = Height;
+
+}());
+</script>
+</body>
+</html>
+
+
